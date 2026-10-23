@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsGuard AI — News Credibility Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="shield">✓</span><span>NewsGuard <b>AI</b><small>Smarter Checks. Safer News.</small></span></a>
+    <nav><a class="active" href="#home">Home</a><a href="#analysis">Analysis</a><a href="#method">How it works</a></nav>
+    <span class="status"><i></i> Offline demo</span>
+  </header>
+
+  <main class="shell" id="home">
+    <section class="hero">
+      <div class="intro">
+        <span class="eyebrow">✦ SMART NEWS LITERACY</span>
+        <h1>Detect misinformation.<br><span>Think with evidence.</span></h1>
+        <p>Review a headline, explore possible warning signs, and get practical steps to verify what you read online.</p>
+        <div class="features">
+          <div><b class="cyan">ϟ</b><span>Instant review<small>Rule-based demo</small></span></div>
+          <div><b class="blue">◇</b><span>Signal breakdown<small>Clear explanations</small></span></div>
+          <div><b class="purple">⌁</b><span>Private by design<small>Runs in your browser</small></span></div>
+        </div>
+      </div>
+
+      <section class="panel analyzer">
+        <div class="panel-title"><span class="tile">▤</span><div><h2>Analyze a news claim</h2><p>Paste a headline or article excerpt.</p></div><span class="ready">● READY</span></div>
+        <label for="article">ARTICLE / CLAIM TEXT</label>
+        <textarea id="article" maxlength="12000" placeholder="Paste a news headline or article text here..."></textarea>
+        <div class="under"><span>ⓘ This demo uses simple text rules, not live fact-checking.</span><span id="counter">0 / 12,000</span></div>
+        <button id="analyze">⌕ &nbsp; Analyze claim <span>↗</span></button>
+        <div class="samples"><span>Try an example:</span><button class="sample" data-text="Scientists discover a new planet, according to a report published by a university research team.">Science claim</button><button class="sample" data-text="SHOCKING!!! Every person will receive one million dollars tomorrow. Share this secret before it is deleted!!!">Suspicious headline</button></div>
+      </section>
+    </section>
+
+    <section id="analysis" class="report hidden">
+      <div class="report-heading"><div><span class="section-tag">ANALYSIS REPORT</span><h2>Claim intelligence</h2></div><span id="timestamp"></span></div>
+      <div class="report-grid">
+        <article class="panel verdict">
+          <span class="card-label">◈ &nbsp; INITIAL ASSESSMENT</span>
+          <div id="verdictIcon" class="verdict-icon">?</div>
+          <h3 id="verdictTitle">Needs verification</h3>
+          <p id="summary"></p>
+          <div class="score-row"><span>Text warning indicator</span><b id="scoreText">—</b></div>
+          <div class="meter"><span id="meterFill"></span></div>
+          <p class="tiny">This indicator is not the probability that a story is true or false.</p>
+        </article>
+        <article class="panel signals">
+          <span class="card-label">⌘ &nbsp; TEXT SIGNALS</span>
+          <div id="signalList"></div>
+        </article>
+        <article class="panel checklist">
+          <span class="card-label">↗ &nbsp; VERIFY NEXT</span>
+          <p class="muted">Before sharing, take these steps:</p>
+          <div class="check"><span>1</span><p>Find the original publisher, author, and publication date.</p></div>
+          <div class="check"><span>2</span><p>Compare the claim with multiple reputable independent sources.</p></div>
+          <div class="check"><span>3</span><p>Look for original documents, research, data, or an official statement.</p></div>
+          <div class="warning"><b>Important limitation</b><p>This demo does not search the internet or verify facts. A human should check the evidence.</p></div>
+        </article>
+      </div>
+      <div class="report-actions"><span>Browser-based demo · No data sent to a server</span><button id="copy">Copy report</button></div>
+    </section>
+
+    <section class="method" id="method">
+      <div class="method-heading"><div><span class="section-tag">THE WORKFLOW</span><h2>A smarter verification process</h2></div><p>Use these indicators to ask better questions — not as proof.</p></div>
+      <div class="method-grid">
+        <article class="panel"><span class="num">01</span><div class="method-icon">⌕</div><h3>Inspect the claim</h3><p>Look for dramatic wording, vague details, and missing context.</p></article>
+        <article class="panel"><span class="num">02</span><div class="method-icon">⌘</div><h3>Review the signals</h3><p>Understand which wording patterns may need closer scrutiny.</p></article>
+        <article class="panel"><span class="num">03</span><div class="method-icon">✓</div><h3>Verify independently</h3><p>Check original sources and compare credible reporting.</p></article>
+      </div>
+    </section>
+    <footer><span>◈ NewsGuard AI</span><span>Educational prototype · No API required</span><span>© 2026</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
